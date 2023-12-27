@@ -1,18 +1,16 @@
 import os
-import openai
 from typing import List
 
-
-openai.api_key = os.environ.get("OPENAI_API_KEY")
-
+from openai import OpenAI
+client = OpenAI()
 
 class ChatCompleter:
-    def __init__(self, model="gpt-3.5-turbo-16k-0613", max_tokens=1000):
+    def __init__(self, model="gpt-3.5-turbo-1106", max_tokens=1000):
         self.model = model
         self.max_tokens = max_tokens
         
     def response(self, messages: List[dict]) -> str:
-        response = openai.ChatCompletion.create(
+        response = client.chat.completions.create(
             model=self.model, 
             messages=messages,
             max_tokens=self.max_tokens,
@@ -22,4 +20,5 @@ class ChatCompleter:
             presence_penalty=0,
             stop=["###"]
         )
-        return response['choices'][0]['message']['content']
+        print(response.choices[0].message.content)
+        return response.choices[0].message.content

@@ -11,6 +11,7 @@ const useStyles = makeStyles({
     alignSelf: 'center',
     backgroundColor: '#0b81ff',
     color: '#fff',
+    width: 'fit-content',
     borderRadius: '10px 10px 10px 10px',
     margin: '5px',
     padding: '10px',
@@ -20,6 +21,7 @@ const useStyles = makeStyles({
   botMessage: {
     alignSelf: 'center',
     backgroundColor: '#f3f3f3',
+    width: 'fit-content',
     borderRadius: '10px 10px 10px 10px',
     margin: '5px',
     padding: '10px',
