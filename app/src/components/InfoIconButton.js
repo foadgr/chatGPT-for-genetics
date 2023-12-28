@@ -7,7 +7,7 @@ import Tooltip from '@mui/material/Tooltip';
 export default function InfoIconButton({ handleOpen }) {
     return (
         <Tooltip title="More information">
-        <IconButton onClick={handleOpen} color="primary">
+        <IconButton onClick={handleOpen} color="tertiary">
             <InfoIcon />
         </IconButton>
         </Tooltip>

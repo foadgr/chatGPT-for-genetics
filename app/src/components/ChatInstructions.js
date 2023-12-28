@@ -15,7 +15,7 @@ export default function ChatInstructions({ open, handleOpen, handleClose }) {
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>
                     <Box display="flex" justifyContent="space-between" alignItems="center" >
-                        <Typography variant="h5" sx={{ fontWeight: "medium", m: 1 }}>Open Targets<br></br>AI Query Assistant</Typography>
+                        <Typography variant="h5" sx={{ fontWeight: "medium", m: 1 }}>OpenTargets GPT Assistant</Typography>
                         <IconButton edge="end" color="inherit" onClick={handleClose} aria-label="close">
                             <CloseIcon color="primary" />
                         </IconButton>
@@ -23,32 +23,26 @@ export default function ChatInstructions({ open, handleOpen, handleClose }) {
                 </DialogTitle>
                 <DialogContent>
                     <Typography variant="body2" sx={{ fontWeight: 20, m: 1 }}>
-                    This assistant leverages OpenAI&apos;s <a href="https://platform.openai.com/docs/guides/gpt" target="_blank">GPT-3.5-Turbo</a> model to learn the <a href="https://platform.opentargets.org/" target="_blank">Open Targets</a> GraphQL API and develop intelligent queries against their database.
+                    This service uses OpenAI <a href="https://platform.openai.com/docs/guides/gpt" target="_blank">GPT-3.5-Turbo</a> to learn the <a href="https://platform.opentargets.org/" target="_blank">OpenTargets</a> API and build intelligent GraphQL queries.
                     </Typography><br></br>
 
                     <Typography variant="h6">
-                        How To Get Started
+                        Getting started
                     </Typography>
                     <Typography variant="body2" sx={{ fontWeight: 10, m: 1 }}>
-                        Think about the information you want to retrieve. This could be about associations of drugs, diseases, targets, or clinical symptoms related to a specific gene, disease, or drug. 
+                        What would you like to retrieve from OpenTargets? This assistant can query many different links between drugs, diseases, genetic targets, and clinical symptoms.
                     </Typography>
-                    
-                    <Typography variant="h6" >
-                        Enter Your Query
-                    </Typography>
-                    <Typography variant="body2" sx={{ fontWeight: 10, m: 1 }}>
-                        {"Start by asking a question in natural language. For instance, 'Find all drugs for BRCA1' or 'Search for all information on insulin'."}
-                    </Typography>
-                    
                     <Typography variant="h6">
-                        Get Your Results
+                        Enter your question
                     </Typography>
                     <Typography variant="body2" sx={{ fontWeight: 10, m: 1 }}>
-                        {"Submit your question, and the assistant will transform your question into a GraphQL query and interpret the corresponding results."}
-                    </Typography><br></br>
+                    {"A question like, 'Find the top 5 drugs associated with BRCA1' or 'What information do you have about gene targets for Keytruda?'"}
+                    <br></br><br></br>
+                    {"Press send, and wait as the assistant transforms your question to GraphQL and interprets the corresponding results."}
+                    </Typography>
 
                     <Typography variant="captiontext">
-                    Made by <a href="https:www.foadgreen.com" target="_blank">@foadgr</a>
+                    Made by <a href="https://foadgreen.com/" target="_blank">@foadgr</a>
                     </Typography>
                 </DialogContent>
             </Dialog>
